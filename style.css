@@ -1,0 +1,131 @@
+body {
+  align-items: center;    
+  display: flex;
+  height: 100vh;           
+  justify-content: center;
+  margin: 0;          
+  overflow: hidden
+}
+
+/* Base Button Styling */
+button {
+  align-items: center;
+  aspect-ratio: 1 / 1;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  font-size: 1.1rem;
+  justify-content: center;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Specific Button Colors & Behaviors */
+.btn-clear {
+  background-color: #e74c3c !important;
+}
+
+.btn-del {
+  background-color: #3498db !important;
+}
+
+.btn-equal {
+  aspect-ratio: auto;
+  background-color: #3498db !important;
+  grid-column: span 2;
+  height: 100%;
+}
+
+/* Grid Layout for Buttons */
+.buttons {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+/* Main Calculator Container */
+.calculator {
+  background-color: #111a2e;
+  border-radius: 25px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  padding: 25px;
+  width: 360px;
+}
+
+/* Main Display (Input) */
+#display {
+  background: transparent !important;
+  border: none;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 2.5rem;
+  height: 120px;
+  margin-bottom: 0;
+  overflow: hidden;
+  padding: 20px;
+  text-align: right;
+  transition: font-size 0.2s ease;
+  white-space: nowrap;
+  width: 100%;
+}
+
+#display.font-small {
+  font-size: 1.4rem;
+}
+
+/* Display Wrapper */
+.display-container {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  margin-bottom: 20px;
+  padding: 10px;
+  position: relative;
+  text-align: right;
+}
+
+/* History Line */
+#history {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.2rem;
+  min-height: 1.5rem;
+  padding-right: 10px;
+}
+
+/* Max Character Indicator */
+#limit-indicator {
+  background: rgba(231, 76, 60, 0.1);
+  border-radius: 4px;
+  color: #e74c3c;
+  font-size: 0.65rem;
+  font-weight: bold;
+  left: 15px;
+  opacity: 0;
+  padding: 2px 5px;
+  pointer-events: none;
+  position: absolute;
+  top: 10px;
+  transition: opacity 0.2s ease;
+}
+
+#limit-indicator.active {
+  opacity: 1;
+}
+
+/* Operator & Special Button Styling */
+[data-type="operator"],
+[data-type="special"] {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+[data-type="toggle"] {
+  background: rgba(52, 152, 219, 0.1);
+  color: #3498db;
+  font-size: 0.75rem;
+}

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pro Calculator | Felipe Pereira</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="calculator">
+      <!-- Dual-line display container -->
+      <div class="display-container">
+        <span id="limit-indicator">MAX CHAR</span>
+        <!-- History line -->
+        <div id="history"></div>
+        <!-- Main output line -->
+        <input type="text" id="display" placeholder="0" disabled />
+      </div>
+
+      <div class="buttons">
+        <!-- Row 1 -->
+        <button class="btn-clear" data-type="clear">C</button>
+        <button class="btn-del" data-type="del">DEL</button>
+        <button class="btn-ans" data-type="ans">ANS</button>
+        <button data-type="operator" data-value="/">/</button>
+        <button data-type="special" data-value="&radic;">&radic;</button>
+
+        <!-- Row 2 -->
+        <button data-type="number" data-value="7">7</button>
+        <button data-type="number" data-value="8">8</button>
+        <button data-type="number" data-value="9">9</button>
+        <button data-type="operator" data-value="*">x</button>
+        <button data-type="special" data-value="&sup2;">x&sup2;</button>
+
+        <!-- Row 3 -->
+        <button data-type="number" data-value="4">4</button>
+        <button data-type="number" data-value="5">5</button>
+        <button data-type="number" data-value="6">6</button>
+        <button data-type="operator" data-value="-">-</button>
+        <button data-type="special" data-value="%">%</button>
+
+        <!-- Row 4 -->
+        <button data-type="number" data-value="1">1</button>
+        <button data-type="number" data-value="2">2</button>
+        <button data-type="number" data-value="3">3</button>
+        <button data-type="operator" data-value="+">+</button>
+        <button data-type="special" data-value="!">!</button>
+
+        <!-- Row 5 -->
+        <button data-type="number" data-value="0">0</button>
+        <button data-type="number" data-value=".">.</button>
+        <button data-type="number" data-value=",">,</button>
+        <button data-type="operator" data-value="^">^</button>
+        <button data-type="toggle" title="Toggle Notation">Sci/Dec</button>
+
+        <!-- Row 6 (Items filling the space next to the '=' button) -->
+        <button data-type="operator" data-value="(">(</button>
+        <button data-type="operator" data-value=")">)</button>
+        <button data-type="special" data-value="&pi;">&pi;</button>
+        <button class="btn-equal" data-type="calculate">=</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
